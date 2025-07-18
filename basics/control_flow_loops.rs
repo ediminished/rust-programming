@@ -76,7 +76,45 @@ fn main(){
 
     // for loop
     for i in 1..=5 { // inclusive range
+        println!("For loop iteration inclusive: {}", i);
+    }
+
+        // for loop
+    for i in 1..5 { // inclusive range
         println!("For loop iteration: {}", i);
     }
+
+    // for loop with an array
+    let arr = [10, 20, 30, 40, 50];
+    for &value in arr.iter() {
+        println!("Array value: {}", value);
+    }
+
+    // for loop with an iterator
+    let vec = vec![1, 2, 3, 4, 5];
+    for value in vec.iter() {
+        println!("Vector value: {}", value);
+    }
+
+    // for loop with enumerate
+    for (index, value) in vec.iter().enumerate() {
+        println!("Index: {}, Value: {}", index, value);
+    }
+
+    // for loop with a range and step
+    for i in (1..10).step_by(2) {
+        println!("For loop with step: {}", i);
+    }
+
+    // reverse for loop
+    for i in (1..=5).rev() { // inclusive range
+        println!("Reverse for loop iteration: {}", i);
+    }
+
+    // reverse for loop with negative step
+    for i in (1..=5).rev().step_by(2) { // inclusive range
+        println!("Reverse for loop with step: {}", i);
+    }
+ 
 
 }
